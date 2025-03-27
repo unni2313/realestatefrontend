@@ -18,7 +18,7 @@ function Add_property() {
     const handleSubmit= async (e) => {
         e.preventDefault()
         try {
-            await axios.post("http://localhost:3000/intemInserting" ,property)//api endpoint 
+            await axios.post("https://realestatebackend-uund.onrender.com/intemInserting/intemInserting" ,property)//api endpoint 
             alert("successfully laoded")
         }
         catch(e)
