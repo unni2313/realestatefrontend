@@ -1,14 +1,24 @@
 import './App.css'
-import NavBar from './components/NavBar'
-import Hero from './components/Hero'
-import Foooter from './components/Foooter'
+import Home from './components/pages/Home'
+import Navbar from './components/pages/Navbar'
+import Listing from './components/pages/Listing'
+import Add_property from './components/pages/Add_property'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import List from './components/pages/List'
 function App() {
   return (
     <>
-    <NavBar name="felix"/>
-    <Hero/>
-    <Foooter/>
-     <h1 className="title">Hello Maamee....!</h1>
+      <List/>
+      <BrowserRouter>
+      <Navbar/>
+
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/listing" element={<Listing/>}/>
+        <Route path="/add_property" element={<Add_property/>}/>
+      </Routes>
+      </BrowserRouter>
+    
     </>
   )
 }
